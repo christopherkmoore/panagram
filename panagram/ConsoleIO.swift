@@ -36,4 +36,12 @@ class ConsoleIO {
         writeMessage("Type \(executableName) without an option to enter interactive mode.")
     }
     
+    func getInput() -> String {
+        let keyboard = FileHandle.standardInput
+        let inputData = keyboard.availableData
+        let strData = String(data: inputData, encoding: .utf8)
+        
+        return strData!.trimmingCharacters(in: CharacterSet.newlines)
+        
+    }
 }

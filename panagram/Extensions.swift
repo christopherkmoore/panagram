@@ -10,12 +10,19 @@ import Foundation
 
 extension String {
     
-    func isAnagram(_ string: String) -> Bool {
+    func isAnagramOf(_ string: String) -> Bool {
         
-        let selfSorted = self.lowercased().replacingOccurrences(of: " ", with: "").characters.sorted().flatMap { $0 }
-        let stringSorted = string.lowercased().replacingOccurrences(of: " ", with: "").characters.sorted().flatMap { $0 }
+        let selfSorted = String(self.lowercased().replacingOccurrences(of: " ", with: "").characters.sorted())
+        let stringSorted = String(string.lowercased().replacingOccurrences(of: " ", with: "").characters.sorted())
         
         return selfSorted == stringSorted
         
+    }
+    
+    func isPalindrome() -> Bool {
+        let selfLower = self.lowercased().replacingOccurrences(of: " ", with: "")
+        let selfReversedLower = String(selfLower.characters.reversed())
+        
+        return selfLower == selfReversedLower
     }
 }
