@@ -10,7 +10,7 @@ import Foundation
 
 extension String {
     
-    func isAnagramOf(_ string: String) -> Bool {
+    public func isAnagramOf(_ string: String) -> Bool {
         
         let selfSorted = String(self.lowercased().replacingOccurrences(of: " ", with: "").characters.sorted())
         let stringSorted = String(string.lowercased().replacingOccurrences(of: " ", with: "").characters.sorted())
@@ -19,7 +19,7 @@ extension String {
         
     }
     
-    func isPalindrome() -> Bool {
+    public func isPalindrome() -> Bool {
         let selfLower = self.lowercased().replacingOccurrences(of: " ", with: "")
         let selfReversedLower = String(selfLower.characters.reversed())
         

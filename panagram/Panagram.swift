@@ -29,7 +29,7 @@ enum OptionType: String {
     }
 }
 
-class Panagram {
+public class Panagram {
     
     let consoleIO = ConsoleIO()
     

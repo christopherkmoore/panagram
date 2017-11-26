@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ConsoleIO {
+public class ConsoleIO {
     
     enum OutputType {
         case error, standard
