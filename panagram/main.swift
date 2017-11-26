@@ -1,12 +1,10 @@
-//
-//  main.swift
-//  panagram
-//
-//  Created by Christopher Moore on 11/26/17.
-//  Copyright © 2017 Christopher Moore. All rights reserved.
-//
 
-import Foundation
+import  Foundation
 
-print("Hello, World!")
+let panagram = Panagram()
 
+if CommandLine.argc < 2 {
+    //TODO: handle interactive mode
+} else {
+    panagram.staticMode()
+}
